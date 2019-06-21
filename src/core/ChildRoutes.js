@@ -1,15 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+ 
 
-import RouterUtils from './RouterUtils';
-
-const ChildRoutes = (props) => {
-  if (props.match) {
-    Object.keys(props.match.params).forEach((paramKey) => {
-      RouterUtils.setParam(paramKey, props.match.params[paramKey]);
-    });
-    RouterUtils.setup();
-  }
+const ChildRoutes = (props) => { 
   const routes = (props.routes || []).map((route, index) => (
     <Route
       key={route.key || index}

@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Footer = props => {
-
-
   return (
     <footer className="footer">
       <p>
@@ -13,7 +11,6 @@ const Footer = props => {
       </p>
     </footer>
   );
-
 };
 
 Footer.propTypes = {};

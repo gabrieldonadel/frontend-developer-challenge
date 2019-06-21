@@ -54,13 +54,127 @@ header.header{
     }
   }
 }
-section.products{
+section.products, section.share{
   text-align: center;
   h2{
     color:#888888;
     font-size: 18px;
     font-weight: bold;
+  }
+
+  p,label{
+    color:#888888;
+    font-size: 12px;
+    margin: 0px 0 6px 0;
+  }
+
+  .card-group{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    max-width: 931px;
+    margin: auto;
+  
+    .card{
+      width: 200px;
+      margin: auto;    
+      margin-bottom: 40px;
+      
+      .product-img{
+        display: flex;
+        height: 150px;
+        border: 1px solid #707070;
+        align-items: center;
+        justify-content: center;
+      }
+      p{
+        text-align: left;
+        &:last-of-type{
+          margin-bottom: 10px;
+        }
+      }
+      p.product-name{
+        font-size: 14px;
+        margin: 14px 0 10px 0;
+      }
+      span{
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+  .btn{
+    min-width: 200px;
+    background: #FFFFFF;
+    border: 1px solid #707070;
+    color:#888888;
+    border-radius: 4px;
+    height: 30px; 
+    padding: 6px;
+
+    &.larger-btn{ 
+      padding: 10px;
+      height: 40px;
+      width: 260px;
+    }
+  }
+}
+section.products{
+  h2{
     margin-top: 48.67px;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;  
+  }
+  .btn.larger-btn{ 
+    margin-top: 2px;
+  }
+}
+section.share{
+  h2{
+    margin-top: 164px;
+    margin-bottom: 44px; 
+  }
+  p{
+    font-size: 14px; 
+    margin-bottom: 40px; 
+  }
+
+  form{
+    margin: 0 auto 50px;
+    max-width: 720px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, auto));
+
+    .input{ 
+      margin: auto 20px;
+      label{
+        display: block;
+        text-align: left;
+      }
+      input{
+        width: 100%;
+        max-width: 340px;
+        height: 30px;
+        border: 1px solid #707070;
+        color: #888888;
+        padding: 0 10px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  margin-bottom: 142.36px; 
+}
+p#response{
+  display: none;    
+  text-align: left;
+  margin: 0 20px;
+  margin-bottom: 0px;
+
+  &.success{
+    display: block;
+    color: #4caf50;
+  }
+  &.error{
+    display: block; 
+    color: #F44336;
   }
 }
