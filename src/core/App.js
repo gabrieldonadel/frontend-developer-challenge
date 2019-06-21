@@ -3,8 +3,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 
-
-import '../styles/App.css';
+ 
 import ChildRoutes from './ChildRoutes';
 import baseRoutes from './routes';
 import store from './store';

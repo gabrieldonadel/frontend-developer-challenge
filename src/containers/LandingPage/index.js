@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 // Redux
 import { connect } from 'react-redux';
 import * as actions from './actions';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
 export class LandingPage extends Component {
   
@@ -22,16 +24,26 @@ export class LandingPage extends Component {
 
   render() {
     console.log(this.props.productsData);
+
+    var products = this.props.productsData.map(product => {
+
+      return(
+        <div class="card">
+          {product.name}
+        </div>
+      );
+    })
     return (
-        <React.Fragment>
-        
-        <div className="">
-            <div className="">
-                <h1>uma seleção de produtos</h1>
-                <h1>especial para você</h1>
+        <React.Fragment> 
+          <Header/>
+          <section className="products">
+            <h2>Sua seleção especial</h2>
+            <div>
+              {products}  
             </div>
             <button onClick={this.handleLoadMoreClick.bind(this)}>Load More</button>
-        </div>
+          </section>
+          <Footer/>
         </React.Fragment>
     );
   }
