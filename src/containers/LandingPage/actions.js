@@ -23,7 +23,7 @@ export const getProductsData = (query) => (dispatch, store) => {
 
 //Send the form data and register on the Linx NewsLetter
 export const subscribeNewsLetter= (body) => (dispatch, store) => {
-  return request.post(`www.rdstation.com.br/api/1.3/conversions`,body)
+  return request.post(`https://www.rdstation.com.br/api/1.3/conversions`,body)
     .then((response) => {
       dispatch({
         type: 'FORM_RESPONSE',

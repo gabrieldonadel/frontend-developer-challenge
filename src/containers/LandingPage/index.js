@@ -35,6 +35,7 @@ export class LandingPage extends Component {
     //Create a arary of produts 
     var products = this.props.productsData.map(product => { 
       return(
+        (product)?
         <div className="card" key={product.id}>
           <div className="product-img">
             <img src={product.image} />
@@ -45,6 +46,8 @@ export class LandingPage extends Component {
           <p><span>{`Por: R\$${this.formatPrices(product.price)}`}</span></p>
           <p>{`ou ${product.installments.count}x de R\$${this.formatPrices(product.installments.value)}`}</p>
           <button className="btn buy-btn">Comprar</button>
+        </div>
+        :<div className="card">
         </div>
       );
     })
